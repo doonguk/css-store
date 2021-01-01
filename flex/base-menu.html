@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../default.css"/>
+  <title>base-menu</title>
+  <style>
+    .menu {
+      display: flex;
+    }
+
+    .menu-item {
+      background-color: gold;
+      width: 25%;
+      /* flex-grow: 1; */
+      transition: 0.5s;
+    }
+
+    .menu-item:hover {
+      width: 35%;
+      background-color: crimson;
+    }
+
+    .menu-link {
+      display: block;
+      padding: 1em;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #555;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .menu-link:hover {
+      color: white;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <div class="menu-item"><a href="#" class="menu-link">Home</a></div>
+    <div class="menu-item"><a href="#" class="menu-link">About</a></div>
+    <div class="menu-item"><a href="#" class="menu-link">Product</a></div>
+    <div class="menu-item"><a href="#" class="menu-link">Contact</a></div>
+  </div>
+</body>
+</html>
