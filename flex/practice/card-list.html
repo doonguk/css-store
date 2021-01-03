@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cardList</title>
+  <link rel="stylesheet" href="../../default.css"/>
+  <style>
+    .card-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+
+    .card-image{
+      height: 0;
+      padding-bottom: 60%;
+      background-color: lightgray;
+      background-image: url(./ilbuni.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-image img {
+      display: none;
+    }
+
+    .card-desc {
+      flex-grow: 1;
+      padding: 1em;
+      background: white;
+    }
+
+    @media (min-width: 600px) {
+      .card-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -1rem;
+      }
+
+      .card-item {
+        width: 50%;
+        padding: 0 1rem;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .card-item {
+        width: 33.33333%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <ul class="card-list">
+    <li class="card-item">
+      <figure class="card-image">
+        <img src="./ilbuni.png" alt="일분이">
+      </figure>
+      <div class="card-desc">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima accusantium accusamus ipsam debitis quis natus atque esse corrupti blanditiis minus.
+      </div>
+    </li>
+    <li class="card-item">
+      <figure class="card-image">
+        <img src="./ilbuni.png" alt="일분이">
+      </figure>
+      <div class="card-desc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odio quos magni libero quod ipsam aspernatur repellendus magnam ducimus atque dolorum culpa voluptate ex assumenda quidem architecto harum, officia accusantium vitae reiciendis esse quia quam minus? Minima nesciunt quidem est.
+      </div>
+    </li>
+    <li class="card-item">
+      <figure class="card-image">
+        <img src="./ilbuni.png" alt="일분이">
+      </figure>
+      <div class="card-desc">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima accusantium accusamus ipsam debitis quis natus atque esse corrupti blanditiis minus.
+      </div>
+    </li>
+    <li class="card-item">
+      <figure class="card-image">
+        <img src="./ilbuni.png" alt="일분이">
+      </figure>
+      <div class="card-desc">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima accusantium accusamus ipsam debitis quis natus atque esse corrupti blanditiis minus.
+      </div>
+    </li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex-practice</title>
+  <link rel="stylesheet" href="../../default.css">
+  <link rel="stylesheet" href="./ui.css">
+  <style>
+    .header {
+      display : flex;
+      height: 80px;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .search-form {
+      margin-left: auto;
+      margin-right: 4rem;
+    }
+
+    .primary {
+      padding: 1rem;
+    }
+
+    .secondary {
+      padding: 1rem;
+    }
+
+    .secondary-a {
+      background: white;
+    }
+
+    .secondary-b {
+      color: white;
+      background: #666;
+    }
+
+    .footer {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .modal {
+      display: none;
+      top: 80px;
+    }
+
+    #modal-switch {
+      font-size: 2rem;
+    }
+
+    #modal-switch:checked ~ .modal {
+      display: flex;
+    }
+
+    #modal-switch:checked ~ label[for="modal-switch"]:before {
+      color: dodgerblue;
+    }
+
+    label[for="modal-switch"]:before {
+      content: '♥';
+      font-size: 2rem;
+    }
+
+    #modal-switch,
+    label[for="modal-switch"] span {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      opacity: 0;
+    }
+    
+    label[for="modal-switch"] {
+      position: absolute;
+      top: 1.3rem;
+      right: 2rem;
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- header -->
+    <header class="header">
+      <h1 class="website-title">1분코딩</h1>
+      <form class="search-form">
+        <input type="search">
+        <input type="submit" value="찾기">
+      </form>
+    </header>
+    <!-- menu -->
+    <div class="menu">
+      <div class="menu-item"><a href="#" class="menu-link">Home</a></div>
+      <div class="menu-item"><a href="#" class="menu-link">About</a></div>
+      <div class="menu-item"><a href="#" class="menu-link">Product</a></div>
+      <div class="menu-item"><a href="#" class="menu-link">Contact</a></div>
+    </div>
+    <!-- primary-content -->
+    <section class="primary">
+      <ul class="card-list">
+        <li class="card-item">
+          <figure class="card-image">
+            <img src="./ilbuni.png" alt="일분이">
+          </figure>
+          <div class="card-desc">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima accusantium accusamus ipsam debitis quis natus atque esse corrupti blanditiis minus.
+          </div>
+        </li>
+        <li class="card-item">
+          <figure class="card-image">
+            <img src="./ilbuni.png" alt="일분이">
+          </figure>
+          <div class="card-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odio quos magni libero quod ipsam aspernatur repellendus magnam ducimus atque dolorum culpa voluptate ex assumenda quidem architecto harum, officia accusantium vitae reiciendis esse quia quam minus? Minima nesciunt quidem est.
+          </div>
+        </li>
+        <li class="card-item">
+          <figure class="card-image">
+            <img src="./ilbuni.png" alt="일분이">
+          </figure>
+          <div class="card-desc">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima accusantium accusamus ipsam debitis quis natus atque esse corrupti blanditiis minus.
+          </div>
+        </li>
+        <li class="card-item">
+          <figure class="card-image">
+            <img src="./ilbuni.png" alt="일분이">
+          </figure>
+          <div class="card-desc">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima accusantium accusamus ipsam debitis quis natus atque esse corrupti blanditiis minus.
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- secondary-a -->
+    <aside class="secondary secondary-a">
+      <ul class="info-list">
+        <li class="info-list-item">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, eligendi asperiores? Optio dolorem iure quaerat ratione deserunt dolor harum quas!
+        </li>
+        <li class="info-list-item">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi dolore nisi eveniet aliquid delectus cupiditate expedita obcaecati voluptatibus sunt deserunt.
+        </li>
+        <li class="info-list-item">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta atque perspiciatis aut fugit assumenda quisquam iusto. Omnis ratione cupiditate aliquam?
+        </li>
+      </ul>
+      <ul class="user-list friend-list">
+        <li class="user-item friend-item">
+          <figure class="user-photo"
+           style="background-image: url(./ilbuni.png);"></figure>
+           <p class="user-name">
+            흐드윽 흐드윽 흐드윽 흐드윽 흐드윽 흐드윽 흐드윽 흐드윽 흐드윽
+           </p>
+        </li>
+        <li class="user-item friend-item">
+          <figure class="user-photo"
+           style="background-image: url(./ilbuni.png);"></figure>
+           <p class="user-name">
+            흐드윽 흐드윽 흐드윽 흐드윽 흐드윽 흐드윽 흐드윽 흐드윽 흐드윽
+           </p>
+        </li>
+        <li class="user-item friend-item">
+          <figure class="user-photo"
+           style="background-image: url(./ilbuni.png);"></figure>
+           <p class="user-name">
+            흐드윽 흐드윽 흐드윽 흐드윽 흐드윽 흐드윽 흐드윽 흐드윽 흐드윽
+           </p>
+        </li>
+      </ul>
+    </aside>
+    <!-- secondary-b -->
+    <aside class="secondary secondary-b">
+      <ul class="user-list message-list">
+        <li class="user-item message-item">
+          <figure class="user-photo"
+           style="background-image: url(./ilbuni.png);"></figure>
+           <p class="message-content">
+             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, quisquam? Alias, dicta aperiam. Ullam in facere enim, itaque reiciendis ab?
+           </p>
+        </li>
+        <li class="user-item message-item">
+          <figure class="user-photo"
+           style="background-image: url(./ilbuni.png);"></figure>
+           <p class="message-content">
+             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, quisquam? Alias, dicta aperiam. Ullam in facere enim, itaque reiciendis ab?
+           </p>
+        </li>
+        <li class="user-item message-item">
+          <figure class="user-photo"
+           style="background-image: url(./ilbuni.png);"></figure>
+           <p class="message-content">
+             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, quisquam? Alias, dicta aperiam. Ullam in facere enim, itaque reiciendis ab?
+           </p>
+        </li>
+      </ul>
+    </aside>
+    <!-- footer -->
+    <footer class="footer">
+      This is footer
+    </footer>
+  </div>
+
+  <input type="checkbox" id="modal-switch">
+  <label for="modal-switch">
+    <span>modal 열고 닫기</span>
+  </label>
+
+  <div class="modal">
+    <div class="dialog">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta quod hic eligendi nobis incidunt explicabo, esse doloremque dignissimos nesciunt architecto minima. Minus beatae esse quod eius minima, accusamus impedit voluptates distinctio quis dignissimos doloribus, similique delectus, nihil id nisi facere. Ducimus numquam maiores minima repellat? Nostrum eos voluptatem inventore vel.
+    </div>
+  </div>
+</body>
+</html>

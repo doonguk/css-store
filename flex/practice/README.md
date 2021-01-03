@@ -38,3 +38,8 @@
       white-space: nowrap;
     }
 ```
+
+**card-list**
+- 반응형 카드 리스트를 위해서 figure 영역에 세로 패딩을 적용(`padding-bottom: 60%`)
+- `width`가 600px 이상인 경우 좌우 패딩을 없애기 위해 컨테이너에 마이너스 margin 적용
+- 모든 card-desc 부분의 height을 맞추기 위해 `flex-grow` 사용 (알아서 늘어나게~)
