@@ -39,6 +39,7 @@
     .footer {
       padding: 1rem;
       text-align: center;
+      border-top: 1px solid lightgray;
     }
 
     .modal {
@@ -81,6 +82,52 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+    }
+
+    @media (min-width: 1024px) {
+      .page {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .header {
+        width: 100%;
+      }
+
+      .menu {
+        width: 100%;
+      }
+      .secondary-a {
+        order: 1;
+      }
+
+      .secondary-b {
+        order: 3;
+      }
+
+      .secondary {
+        width: 20%;
+      }
+
+      .primary {
+        width: 60%;
+        order: 2;
+      }
+
+      .footer {
+        order: 4;
+        width: 100%;
+      }
+    }
+    
+    @media (min-width: 1400px) {
+      .secondary {
+        width: 300px;
+      }
+
+      .primary {
+        width: calc(100% - 600px);
+      }
     }
   </style>
 </head>
